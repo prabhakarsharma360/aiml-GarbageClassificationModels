@@ -1,0 +1,224 @@
+@font-face {
+  font-family: 'montserrat';
+  src: url('../Montserrat/static/Montserrat-Regular.ttf');
+}
+@font-face {
+  font-family: 'montserratmedium';
+  src: url('../Montserrat/static/Montserrat-Medium.ttf');
+}
+@font-face {
+  font-family: 'montserratsemibold';
+  src: url('../Montserrat/static/Montserrat-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'montserratbold';
+  src: url('../Montserrat/static/Montserrat-Bold.ttf');
+}
+* {
+  font-family: 'montserrat';
+}
+
+body {
+  font-family: 'montserrat';
+  background-color: #F8F8F8;
+  padding: 24px;
+}
+.left-side-container,.right-side-container{
+  background: #fff;
+  padding: 24px;
+  border:1px solid #eee
+}
+.logo-container{
+  display: table;
+  margin: 0 auto;
+}
+.logo-container img{
+  height:160px
+}
+  .container {
+    max-width: 1280px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: none;
+  }
+  p,h1,h2,h3,h4,h5{
+    margin: 0;
+  }
+  p{
+    font-size: 13px;
+    line-height: 130%;
+    color: #212529;
+    font-family: 'montserrat';
+    font-weight: 400;
+  }
+  h2.page-title {
+    font-weight: 600;
+    font-family: 'montserratsemibold';
+    font-size: 24px;
+    line-height: 36px;
+    color: #212529;
+    text-transform: none;
+    margin: 18px 0;
+  }
+.team-theme,.team-solution{
+    text-align: left;
+    font: normal normal 500 16px/19px 'montserratmedium';
+    letter-spacing: 0px;
+    color: #495057;
+    text-transform: capitalize;
+    margin: 12px 0 8px;
+}
+.team-solution{
+  margin: 0 0 24px;
+}
+.member-content{
+    font-size: 14px;
+    line-height: 130%;
+    color: #212529;
+    font-family: 'montserrat';
+    font-weight: 400;
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+.member-content .fa-circle-user{
+  color: #495057;
+  font-size: 28px;
+  margin-right: 5px ;
+}
+  .btn-green {
+    margin: 0 auto;
+    display: table;
+    padding: 8px 24px;
+    font-size: 14px;
+    font-family: 'montserratmedium';
+    font-weight: 500;
+    border: none;
+    outline: none;
+    border:1px solid #016938;
+    background: #016938;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .btn-green:hover,
+  .btn-green:focus {
+    color: #fff;
+    background: #016938;
+  }
+
+  .input-label-text {
+    font-weight: 600;
+    font-family: 'montserratsemibold';
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+  }
+  .drag-contianer{
+    box-shadow: inset 0px 0px 2px 2px #c8e4c6;
+    border-radius: 5px;
+    padding: 24px;
+    margin: 24px 0;
+  }
+  .drag-area-container{
+    width: 58%;
+  }
+  .uploaded-file-container{
+    display: none;
+  }
+  .uploaded-file-container{
+    width: 40%;
+    padding: 18px;
+    height: 115px;
+    overflow: auto;
+    box-shadow: 0 0 4px 2px #eee;
+  }
+  .gabage-detail-container .gabage-detail{
+    margin: 0 0 12px;
+  }
+  .gabage-detail-container .gabage-detail .title{
+    font-weight: 600;
+    font-family: 'montserratsemibold';
+  }
+  .gabage-detail-container .gabage-detail:last-child{
+    margin: 0;
+  }
+  .gabage-detail .fa-check{
+    color: #016938;
+  }
+  .gabage-detail .fa-xmark{
+    color: #EF4B8B;
+  }
+  .gabage-detail-container .garbage-detail-content {
+    font-weight: 500;
+    font-family: 'montserratmedium';
+    font-size: 14px;
+    line-height: 16px;
+    color: #495057;
+  }
+  .drag-area{        
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .allowed-type{
+    text-align: left;
+    font: normal normal 500 14px/19px 'montserratmedium';
+    letter-spacing: 0px;
+    color: #212529;
+    text-transform: capitalize;
+    margin: 24px 0 8px;
+  }
+  .drag-area.active{
+    border: 2px solid #fff;
+  }
+  .drag-area .icon{
+    font-size: 30px;
+    /* color: #fff; */
+  }
+  .drag-area header{
+    font-size: 16px;
+    font-weight: 500;
+    /* color: #fff; */
+  }
+  .drag-area span{
+    font-size: 16px;
+    font-weight: 500;
+    /* color: #fff; */
+    margin: 10px 0 15px 0;
+  }
+  /* .drag-area button{
+    padding: 6px 24px;
+    font-size: 14px;
+    font-family: 'montserratmedium';
+    font-weight: 500;
+    border: none;
+    outline: none;
+    border:1px solid #016938;
+    background: none;
+    color: #016938;
+    border-radius: 5px;
+    cursor: pointer;
+  } */
+  .drag-area img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  .progress-bar{
+    background-color: #4b9146;
+  }
+  .progress{
+    height: 0.5rem;
+  }

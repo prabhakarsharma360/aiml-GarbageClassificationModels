@@ -1,52 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Upload Image and Text</title>
+    <title>AI Birds</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="../static/assets/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/assets/css/site.css" />
+    <script src="../static/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="{{ url_for('static', filename='assets/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+    <link
+      rel="stylesheet"
+      href="../static/assets/fontawesome/css/fontawesome.min.css"
+    />
+    <link
+      href="../static/assets/fontawesome/css/fontawesome.min.css"
+      rel="stylesheet"
+    />
+    <link href="../static/assets/fontawesome/css/solid.css" rel="stylesheet" />
   </head>
+
   <body>
-    <h1>Upload Image and Text</h1>
-
-    <form enctype="multipart/form-data">
-      <p>
-        <label for="file">Select an image:</label><br />
-        <input type="file" id="file" name="file" />
-      </p>
-      <p>
-        <label for="text">Enter json data</label><br />
-        <textarea id="text" name="text" rows="20" cols="100"></textarea>
-      </p>
-      <p>
-        <button type="button" onclick="upload()">Upload</button>
-      </p>
-    </form>
-
-    <p id="response"></p>
-
-    <script>
-      function upload() {
-        var fileInput = document.getElementById("file");
-        var textInput = document.getElementById("text");
-
-        var file = fileInput.files[0];
-        var text = textInput.value;
-
-        var formData = new FormData();
-        formData.append("file", file);
-        formData.append("text", text);
-
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "/upload");
-
-        xhr.onload = function () {
-          if (xhr.status === 200) {
-            document.getElementById("response").textContent = xhr.responseText;
-          } else {
-            alert("Error: " + xhr.statusText);
-          }
-        };
-
-        xhr.send(formData);
-      }
-    </script>
+    <div class="container p-0">
+      <div class="row">
+        <div class="col-md-3 left-side-container">
+          <div class="logo-container">
+            <img src="../static/assets/images/AIBirdsLogo.png" alt="AI Birds" />
+          </div>
+          <div class="tem-info">
+            <h2 class="page-title text-center">AI Birds</h2>
+            <p class="team-theme text-center">Guide My Garbage</p>
+            <p class="team-solution text-center">Environmental Protection</p>
+          </div>
+          <div class="member-info">
+            <div class="member-content">
+              <i class="fa-solid fa-circle-user fa-fw"></i>
+              <span class="member-name">Nirupama Mohanty</span>
+            </div>
+            <div class="member-content">
+              <i class="fa-solid fa-circle-user fa-fw"></i>
+              <span class="member-name">Prabhakar Sharma</span>
+            </div>
+            <div class="member-content">
+              <i class="fa-solid fa-circle-user fa-fw"></i>
+              <span class="member-name">Piyush Garg</span>
+            </div>
+            <div class="member-content">
+              <i class="fa-solid fa-circle-user fa-fw"></i>
+              <span class="member-name">Rohit Yadav</span>
+            </div>
+            <div class="member-content">
+              <i class="fa-solid fa-circle-user fa-fw"></i>
+              <span class="member-name">Ankita Chaturvedi</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 right-side-container">
+          <h2 class="page-title">Feature</h2>
+          <div>
+            <p>
+              This AI model can use image recognition technique, i.e. computer
+              vision to identify the type of garbage from the uploaded image,
+              and give the classification as well as the correct type of
+              collection point for that garbage's material for optimal
+              recycling.
+            </p>
+          </div>
+          <p class="allowed-type">Note: Allowed File Type is png, jpeg etc</p>
+          <div
+            class="drag-contianer d-flex justify-content-center flex-wrap align-items-center"
+          >
+            <div class="drag-area-container d-flex justify-content-center">
+              <div class="drag-area">
+                <div class="icon">
+                  <i class="fa-solid fa-arrow-up-from-bracket fa-fw"></i>
+                </div>
+                <header>Drag & Drop to Upload File</header>
+                <span>OR</span>
+                <button class="btn-green">Browse File And Analyse</button>
+                <input type="file" hidden id="file" />
+                <div id="file-name" class="mt-2"></div>
+              </div>
+            </div>
+            <div class="uploaded-file-container">
+              <div class="gabage-detail-container" id="gabage-detail-container">
+                <div
+                  class="d-flex gabage-detail justify-content-between align-items-center"
+                >
+                  <div class="garbage-detail-content garbage-name">
+                    <span class="title">Garbage Type:</span>
+                    <span class="type"></span>
+                  </div>
+                  <!-- <div class="icon-check">
+                  <i class="fa-solid fa-check fa-fw"></i>
+                </div> -->
+                </div>
+                <div
+                  class="d-flex gabage-detail justify-content-between align-items-center"
+                >
+                  <div class="garbage-detail-content garbage-collector">
+                    <span class="title">Garbage Collection Point:</span>
+                    <span class="type"></span>
+                  </div>
+                  <!-- <div class="icon-check">
+                  <i class="fa-solid fa-check fa-fw"></i>
+                </div> -->
+                </div>
+                <div
+                  class="d-flex gabage-detail justify-content-between align-items-center"
+                >
+                  <!-- <div class="garbage-detail-content garbage-accuracy">
+                    <span class="title">Accuracy:</span>
+                    <span class="type"></span>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="70"
+          aria-valuemin="0" aria-valuemax="100" style="width:70%">
+            <span class="sr-only">70% Complete</span>
+          </div>
+        </div>
+        <button class="btn-green">Start Analysis</button> -->
+        </div>
+      </div>
+    </div>
   </body>
+  <script src="{{ url_for('static', filename='assets/JS/init.js') }}"></script>
 </html>
