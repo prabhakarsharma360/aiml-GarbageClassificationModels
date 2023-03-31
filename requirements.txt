@@ -30,8 +30,6 @@ keras==2.11.0
 libclang==15.0.6.1
 llvmlite==0.38.0
 mccabe==0.6.1
-mkl-fft
-mkl-service
 mlxtend==0.21.0
 mpmath==1.2.1
 munkres==1.1.4
