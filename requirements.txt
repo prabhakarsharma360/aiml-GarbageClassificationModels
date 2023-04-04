@@ -45,7 +45,6 @@ Pillow==9.0.1
 protobuf==3.19.1
 pyasn1-modules==0.2.8
 pycosat==0.6.3
-pycurl==7.44.1
 PyDispatcher==2.0.5
 pyls-spyder==0.4.0
 pyreadline==2.1
