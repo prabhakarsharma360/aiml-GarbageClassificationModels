@@ -51,7 +51,6 @@ pyreadline==2.1
 pytest==7.1.1
 python-lsp-jsonrpc==1.0.0
 python-lsp-server==1.2.4
-sip==4.19.13
 split-folders==0.5.1
 statsmodels==0.13.2
 tables==3.6.1
