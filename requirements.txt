@@ -1,4 +1,4 @@
-absl-py==1.4.0
+/*absl-py==1.4.0
 appdirs==1.4.4
 astunparse==1.6.3
 atomicwrites==1.4.0
@@ -59,4 +59,4 @@ tensorboard-plugin-wit==1.8.1
 tensorflow==2.11.0
 tensorflow-estimator==2.11.0
 webencodings==0.5.1
-wincertstore==0.2
+wincertstore==0.2*/
